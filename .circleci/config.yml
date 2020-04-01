@@ -33,10 +33,3 @@ jobs:
         name: Update lambdaFunction code
         command: |
           aws lambda update-function-code --function-name csye6225 --region us-east-1 --zip-file fileb://index.zip
-Attorney | MIT Sloan Management Exec Ed.
-1d •
-
-
-
- 1 day ago
-I never thought I'd be so lucky to work for a company that is motivated by putting people first.  LinkedIn has given me a few Premium subscriptions to give away for free.  We are in unprecedented times and I do hope that this ca
