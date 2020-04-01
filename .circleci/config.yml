@@ -30,6 +30,6 @@ jobs:
           aws s3 cp index.zip s3://${AWS_CODE_DEPLOY_BUCKET}
 
     - run:
-        name: Update lambdaFunction code
+        name: Update lambdaFunction code 1
         command: |
           aws lambda update-function-code --function-name csye6225 --region us-east-1 --zip-file fileb://index.zip
