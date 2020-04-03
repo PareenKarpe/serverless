@@ -10,26 +10,26 @@ jobs:
     - checkout
 
     - run:
-        name: install dependencies
+        name: Install Dependencies
         command: |
           python3 -m venv venv
           . venv/bin/activate
 
     - run:
-        name: install awscli
+        name: install AWSCLI
         command: sudo pip install awscli
 
     - run:
-        name: Zip Artifact
+        name: zip the artifact
         command: |
           zip index.zip index.js
 
     - run:
-        name: Upload LambdaFunction to S3
+        name: Upload lambda to  code deploy S3
         command: |
-          aws s3 cp index.zip s3://${AWS_CODE_DEPLOY_BUCKET}
+          aws s3 cp index.zip s3://${BUCKET}
 
     - run:
-        name: Update lambdaFunction code 17
+        name: update the lambda
         command: |
           aws lambda update-function-code --function-name csye6225 --region us-east-1 --zip-file fileb://index.zip
