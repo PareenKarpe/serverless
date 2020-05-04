@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
   const values = Object.values(obj)
   console.log("here is >>")
   console.log(values[0])
-  let Source = "bills@prod.pareenkarpe.me"
+  let Source = "bills@prod.pareenkar.me"
   let ToAddresses = values[0]
 
   if(values[2] == 'r')
